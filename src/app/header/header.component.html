@@ -1,0 +1,47 @@
+<!-- HEADER -->
+<header class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-lg">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo + Titre -->
+    <div class="flex items-center gap-2">
+      <div class="bg-white/20 p-2 rounded-xl backdrop-blur-md">
+        <span class="text-white text-2xl font-bold">🧠</span>
+      </div>
+      <h1 class="text-white text-2xl font-bold tracking-wide">QuizMaster</h1>
+    </div>
+
+    <!-- Menu principal -->
+    <ul class="hidden md:flex space-x-8 text-white font-medium">
+      <li><a routerLink="/" class="hover:text-yellow-300 transition">Accueil</a></li>
+      <li><a routerLink="/quizz" class="hover:text-yellow-300 transition">Quiz</a></li>
+    </ul>
+
+    <!-- Bouton principal -->
+    <a routerLink="/quizz" class="hidden md:inline-block bg-white text-indigo-600 font-semibold px-5 py-2 rounded-full shadow hover:bg-yellow-300 hover:text-indigo-800 transition">
+      Commencer un quiz
+    </a>
+
+    <!-- Bouton burger (mobile) -->
+    <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+      ☰
+    </button>
+  </nav>
+
+  <!-- Menu mobile -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-indigo-600/90 text-white space-y-4 py-4">
+    <a routerLink="/" class="hover:text-yellow-300 transition">Accueil</a>
+    <a routerLink="/quizz" class="hover:text-yellow-300 transition">Quiz</a>
+    <a routerLink="/quizz" class="bg-white text-indigo-600 font-semibold px-4 py-2 rounded-full shadow hover:bg-yellow-300 hover:text-indigo-800 transition">
+      Commencer un quiz
+    </a>
+  </div>
+</header>
+
+<script>
+  // Toggle menu mobile
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
